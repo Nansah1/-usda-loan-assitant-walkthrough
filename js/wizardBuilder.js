@@ -309,7 +309,8 @@ var WizardBuilder = window.WizardBuilder || {};
             resetButtonElement.style.border = "none";
             // The button jumps back to the given step whose ID equals "resetToStepId"
             resetButtonElement.onclick = function(_) {
-                WizardBuilder.goToStep(wizardElementId, resetToStepId);
+                WizardBuilder.addStep(wizardElementId, resetToStepId);
+				WizardBuilder.goToStep(wizardElementId, resetToStepId);
             }
             actionElement.appendChild(resetButtonElement);
         }
@@ -451,7 +452,7 @@ var WizardBuilder = window.WizardBuilder || {};
 
         _mdlWizardItemCount += 1;
         targetStep.mdlStepNumber = _mdlWizardItemCount;
-        window.scrollTo(0, document.body.scrollHeight+999);
+        window.scrollTo(0, document.body.scrollHeight+1050);
 
     }
 
